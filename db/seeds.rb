@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# require 'faker'
+
+puts "Seeding data…"
+
+10.times do
+  # Article.new(
+  #   title: Faker::ChuckNorris.fact,
+  #   content: Faker::ChuckNorris.fact).save
+  Article.create(
+      title: Faker::ChuckNorris.fact,
+      content: Faker::ChuckNorris.fact
+    )
+end
+
+puts "Data seeded!"
